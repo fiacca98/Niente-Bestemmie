@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title: string = 'barbra streisand';
+  items: string[] = [];
+
+  constructor(){
+    this.items.push("pippo");
+    this.items.push("pluto");
+    this.items.push("paperino");
+    this.items.push("topolino");
+  }
+  
 }
