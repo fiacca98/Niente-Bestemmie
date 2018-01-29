@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Character } from './character';
+import { ListComponent } from './listComponent/list.component';
+import { ListService } from './list.service';
 
 @Component({
   selector: 'app-root',
@@ -6,14 +9,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'barbra streisand';
-  items: string[] = [];
+  title: string ;
+  items: Character[] = [];
+  valore: string;
 
-  constructor(){
-    this.items.push("pippo");
-    this.items.push("pluto");
-    this.items.push("paperino");
-    this.items.push("topolino");
+  constructor() {
+    this.title = 'barbra streisand';
+    let listService: ListService = new ListService();
+    this.items = listService.getCharacterList();
   }
-  
+
+  showValue(){
+    alert("valore: " + this.valore);
+    this.valore = "";
+  }
+
 }
