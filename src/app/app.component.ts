@@ -13,10 +13,9 @@ export class AppComponent {
   items: Character[] = [];
   valore: string;
 
-  constructor() {
+  constructor(private listService: ListService) {
     this.title = 'barbra streisand';
-    let listService: ListService = new ListService();
-    this.items = listService.getCharacterList();
+    this.items = this.listService.getCharacterList();
   }
 
   showValue(){
