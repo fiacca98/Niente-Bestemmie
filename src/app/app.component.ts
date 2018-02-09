@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   showCharacter(item:Character) {
-    this.characterSelected = item;
+    //this.characterSelected = item;
     
   }
 

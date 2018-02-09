@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ListComponent } from './listComponent/list.component';
 import { ListService } from './list.service';
+import { ComunicatorService } from './comunicator.service';
 import { DetailComponent } from './detail/detail.component';
 
 
@@ -18,7 +19,7 @@ import { DetailComponent } from './detail/detail.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [ListService],
+  providers: [ListService, ComunicatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
