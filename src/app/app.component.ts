@@ -12,6 +12,7 @@ export class AppComponent {
   title: string ;
   items: Character[] = [];
   valore: string;
+  characterSelected: Character;
 
   constructor(private listService: ListService) {
     this.title = 'barbra streisand';
@@ -21,6 +22,11 @@ export class AppComponent {
   showValue(){
     alert("valore: " + this.valore);
     this.valore = "";
+  }
+
+  showCharacter(item:Character) {
+    this.characterSelected = item;
+    
   }
 
 }

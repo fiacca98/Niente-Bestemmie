@@ -1,7 +1,10 @@
-<div *ngFor="let item of items; let i=index">
-        <!-- <div *ngIf="i!=(items.length-1)">-->{{item.type}}<br> 
-        {{item.name}}<br>
-        {{item.age}}<br>
-        <!--</div>-->
-        <div >-------</div>
+<div  *ngFor="let item of items; let i=index" (click)="showData(item)">
+        <!-- <div *ngIf="i!=(items.length-1)">-->
+          
+          {{item.type}}<br> 
+        
+          {{item.name}}<br>
+          {{item.age}}<br>
+          <!--</div>-->
+         <div >-------</div>
       </div>
