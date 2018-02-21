@@ -8,6 +8,8 @@ import { ListService } from './list.service';
 import { ComunicatorService } from './comunicator.service';
 import { DetailComponent } from './detail/detail.component';
 import { HeaderComponent } from './header/header.component';
+import { DemoRoutingModule } from './Router/router.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     ListComponent,
     DetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    DemoRoutingModule
   ],
   providers: [ListService, ComunicatorService],
   bootstrap: [AppComponent]

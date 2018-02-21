@@ -13,4 +13,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class HeroRoutingModule { }
+export class DemoRoutingModule { }
