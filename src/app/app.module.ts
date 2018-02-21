@@ -10,6 +10,7 @@ import { DetailComponent } from './detail/detail.component';
 import { HeaderComponent } from './header/header.component';
 import { DemoRoutingModule } from './Router/router.module';
 import { HomeComponent } from './home/home.component';
+import { ChildrenOutletContexts } from '@angular/router';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     DemoRoutingModule
   ],
-  providers: [ListService, ComunicatorService],
+  providers: [ListService, ComunicatorService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
