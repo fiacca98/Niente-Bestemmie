@@ -1,11 +1,13 @@
 
 
 export class Character{
+    id: number;
     type: string;
     name: string;
     age: number;
 
-    constructor(type: string = "Disney", name: string = "Topolino", age: number = 100){
+    constructor(id: number, type: string = "Disney", name: string = "Topolino", age: number = 100){
+        this.id = id;
         this.type=type;
         this.name=name;
         this.age=age;

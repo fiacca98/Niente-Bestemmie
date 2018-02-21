@@ -1,11 +1,22 @@
 import { Character } from "./character";
 
 export class ListService{
+
+    private items: Character[] = [
+        new Character(0,"Animal","Cavallo", 2),
+        new Character(1,"Animal","gatto", 2),
+        new Character(2,"Animal","Cane", 2)
+    ]
     getCharacterList(): Character[]{
-        let items: Character[] = [];
-        items.push(new Character("Animal","Cavallo", 2));
-        items.push(new Character("Animal","gatto", 2));
-        items.push(new Character("Animal","Cane", 2));
-        return items;
+       
+        return this.items;
+    }
+
+    getCharacterById(id: number): Character{
+        for(let character of this.items){
+            if(character.id == id)
+                return character;
+        }
+        return null;
     }
 }

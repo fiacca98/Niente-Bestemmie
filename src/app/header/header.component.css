@@ -1,0 +1,7 @@
+.selected{
+    color: blue;
+}
+.headerContainer div{
+    display: inline-block;
+    cursor: pointer;
+}

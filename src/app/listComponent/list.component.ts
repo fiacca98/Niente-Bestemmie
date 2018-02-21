@@ -1,6 +1,7 @@
 import { Character } from '../character';
 import { Component, Input, EventEmitter, Output } from "@angular/core";
 import { ComunicatorService } from '../comunicator.service';
+import { ListService } from '../list.service';
 
 
 @Component({
@@ -12,12 +13,12 @@ export class ListComponent {
   @Input()
   items: Character[];
   
-  constructor(private comunicatorService: ComunicatorService){
+  constructor(private comunicatorService: ComunicatorService, private listService: ListService){
 
   }
 
   ngOnInit() {
-    this.items.push(new Character());
+    this.items= this.listService.getCharacterList();
   }
 
   ngOnDestroy() {
