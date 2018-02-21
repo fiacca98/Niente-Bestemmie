@@ -9,7 +9,9 @@ const routes: Routes = [
     { path: 'list', component: ListComponent },
     { path: 'detail/:id', component: DetailComponent },
 
-    { path: "", redirectTo: "/home", pathMatch: "full" }
+
+    { path: "", redirectTo: "/home", pathMatch: "full" },
+    { path: "**", component: HomeComponent}
     //{ path: 'hero/:id', component: HeroDetailComponent }
 ];
 @NgModule({
