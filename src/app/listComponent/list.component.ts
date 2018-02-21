@@ -1,7 +1,9 @@
 import { Character } from '../character';
+import { Router } from '@angular/router';
 import { Component, Input, EventEmitter, Output } from "@angular/core";
 import { ComunicatorService } from '../comunicator.service';
 import { ListService } from '../list.service';
+
 
 
 @Component({
@@ -13,7 +15,7 @@ export class ListComponent {
   @Input()
   items: Character[];
   
-  constructor(private comunicatorService: ComunicatorService, private listService: ListService){
+  constructor(private router: Router, private listService: ListService){
 
   }
 
@@ -26,9 +28,8 @@ export class ListComponent {
     //Add 'implements OnDestroy' to the class.
     
   }
-  showData(item:Character){
-    // chiamo il next nel subject;
-    this.comunicatorService.changeSubject(item);
+  selectedItem(item:Character){
+    this.router.navigate(["/detail/" + item.id]);
   }
   
 }
